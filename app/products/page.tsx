@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { useSearchParams } from 'next/navigation'
 import { SlidersHorizontal, Grid3X3, List, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -142,10 +141,18 @@ const sortOptions = [
   { value: 'name', label: 'نام محصول' },
 ]
 
-export default function ProductsPage() {
-  const searchParams = useSearchParams()
-  const initialCategory = searchParams.get('category') || ''
-  const initialSearch = searchParams.get('search') || ''
+export default async function ProductsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{
+    category?: string
+    search?: string
+  }>
+}) {
+  const params = await searchParams
+
+  const initialCategory = params.category || ''
+  const initialSearch = params.search || ''
 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory)
   const [selectedBrands, setSelectedBrands] = useState<string[]>([])

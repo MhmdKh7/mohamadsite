@@ -30,7 +30,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "تلفن همراه",
-    details: ["۰۹۱۹۰۰۳۳۵۶۰"],
+    details: ["09190033560", "09122369623"],
     description: "پشتیبانی و مشاوره",
   },
   {
@@ -168,7 +168,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      placeholder="۰۹۱۹۰۰۳۳۵۶۰"
+                      placeholder="09122369623"
                       required
                     />
                   </div>
@@ -282,11 +282,11 @@ export default function ContactPage() {
                     ۰۲۱-۳۳۹۴۸۴۲۵
                   </a>
                   <a
-                    href="tel:09190033560"
+                    href="tel:09122369623"
                     className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
                   >
                     <Phone className="h-5 w-5" />
-                    ۰۹۱۹۰۰۳۳۵۶۰
+                    09122369623
                   </a>
                 </div>
               </div>
@@ -303,7 +303,7 @@ export default function ContactPage() {
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
-            {
+              {
                 q: "آیا امکان خرید عمده وجود دارد؟",
                 a: "بله، برای خرید عمده با تخفیف ویژه با بخش فروش تماس بگیرید.",
               },

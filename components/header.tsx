@@ -4,9 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { 
-  Menu, 
-  X, 
+import {
+  Menu,
+  X,
   Phone,
   Mail,
   ChevronDown,
@@ -158,8 +158,8 @@ export function Header() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">پشتیبانی و مشاوره</p>
-                  <a href="tel:09190033560" className="font-bold text-foreground hover:text-accent transition-colors">
-                    ۰۹۱۹۰۰۳۳۵۶۰
+                  <a href="tel:09122369623" className="font-bold text-foreground hover:text-accent transition-colors">
+                    09122369623
                   </a>
                 </div>
               </div>
@@ -187,8 +187,8 @@ export function Header() {
               {/* Categories Mega Menu - نمایشی */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     className="gap-2 px-6 py-6 rounded-none text-secondary-foreground hover:bg-accent hover:text-accent-foreground font-medium"
                   >
                     <Menu className="h-5 w-5" />
@@ -209,8 +209,8 @@ export function Header() {
               {/* Bearing Info Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     className="gap-2 px-5 py-6 rounded-none text-secondary-foreground hover:bg-accent hover:text-accent-foreground font-medium"
                   >
                     <BookOpen className="h-4 w-4" />
@@ -253,8 +253,8 @@ export function Header() {
             <div className="flex items-center gap-2 text-sm text-secondary-foreground">
               <Phone className="h-4 w-4 text-accent" />
               <span>مشاوره و سفارش:</span>
-              <a href="tel:09190033560" className="text-accent font-bold hover:underline">
-                ۰۹۱۹۰۰۳۳۵۶۰
+              <a href="tel:09122369623" className="text-accent font-bold hover:underline">
+                09122369623
               </a>
             </div>
           </div>
@@ -268,7 +268,7 @@ export function Header() {
             <ul className="space-y-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className={cn(
                       "block py-3 px-4 rounded-lg font-medium transition-colors",
@@ -287,7 +287,7 @@ export function Header() {
                   دسته‌بندی محصولات
                 </p>
                 {categories.map((category) => (
-                  <span 
+                  <span
                     key={category.name}
                     className="block py-2 px-4 text-muted-foreground"
                   >
@@ -302,7 +302,7 @@ export function Header() {
                   آشنایی با بلبرینگ‌ها
                 </p>
                 {bearingInfoItems.map((item) => (
-                  <Link 
+                  <Link
                     key={item.href}
                     href={item.href}
                     className="block py-2 px-4 text-muted-foreground hover:text-foreground transition-colors"

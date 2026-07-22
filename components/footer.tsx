@@ -162,7 +162,12 @@ export function Footer() {
                 <div>
                   <p className="text-xs text-primary-foreground/60">شماره همراه</p>
                   <a href="tel:09190033560" className="text-primary-foreground hover:text-accent transition-colors font-medium">
-                    ۰۹۱۹۰۰۳۳۵۶۰
+                    09190033560
+                  </a>
+                  <gap className="mx-2 text-primary-foreground/60">|</gap>
+      
+                  <a href="tel:09122369623" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+                    09122369623
                   </a>
                 </div>
               </li>
