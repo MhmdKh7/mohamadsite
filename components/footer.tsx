@@ -77,12 +77,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                  اخبار و مقالات
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   درباره ما
@@ -165,7 +159,7 @@ export function Footer() {
                     09190033560
                   </a>
                   <gap className="mx-2 text-primary-foreground/60">|</gap>
-      
+
                   <a href="tel:09122369623" className="text-primary-foreground hover:text-accent transition-colors font-medium">
                     09122369623
                   </a>
@@ -205,9 +199,9 @@ export function Footer() {
             <p className="text-primary-foreground/60 text-sm text-center md:text-right">
               تمامی حقوق این سایت متعلق به <span className="text-accent font-medium">فروشگاه رول ماشین (Rollmachine)</span> می‌باشد. &copy; ۱۴۰۳
             </p>
-            <p className="text-primary-foreground/50 text-xs">
+            <a href="https://t.me/Mhmd_Kh_7" className="text-primary-foreground/50 text-xs hover:text-accent transition-colors">
               By МохаммадРезаХадеми
-            </p>
+            </a>
           </div>
         </div>
       </div>

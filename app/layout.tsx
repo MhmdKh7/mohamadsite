@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rollmachine.ir"),
 
   title: {
-    default: "رول ماشین | فروش انواع بلبرینگ، رولبرینگ و یاتاقان صنعتی",
+    default: "رول ماشین | فروش عمده انواع بلبرینگ، رولبرینگ و یاتاقان صنعتی",
     template: "%s | رول ماشین",
   },
 
   description:
-    "رول ماشین، مرجع تخصصی فروش انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی از برندهای SKF، FAG، NSK، Timken و NTN با ضمانت اصالت کالا و ارسال سریع.",
+    "رول ماشین، تأمین‌کننده و عمده‌فروش انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی از برندهای SKF، FAG، NSK، NTN، Timken و Koyo با تضمین اصالت کالا، مشاوره تخصصی و ارسال به سراسر ایران.",
 
   keywords: [
     "بلبرینگ",
@@ -31,10 +31,22 @@ export const metadata: Metadata = {
     "بلبرینگ FAG",
     "بلبرینگ NSK",
     "بلبرینگ NTN",
+    "بلبرینگ Timken",
+    "بلبرینگ Koyo",
+    "SKF",
+    "FAG",
+    "NSK",
+    "NTN",
     "Timken",
-    "قطعات صنعتی",
+    "Koyo",
     "فروش بلبرینگ",
     "خرید بلبرینگ",
+    "عمده فروشی بلبرینگ",
+    "واردکننده بلبرینگ",
+    "بلبرینگ تهران",
+    "بلبرینگ امیرکبیر",
+    "یاتاقان صنعتی",
+    "قطعات صنعتی",
     "رول ماشین",
   ],
 
@@ -42,14 +54,14 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Roll Machine",
+      name: "رول ماشین",
       url: "https://rollmachine.ir",
     },
   ],
 
-  creator: "Roll Machine",
+  creator: "رول ماشین",
 
-  publisher: "Roll Machine",
+  publisher: "رول ماشین",
 
   alternates: {
     canonical: "https://rollmachine.ir",
@@ -58,6 +70,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -68,29 +81,35 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "رول ماشین | فروش انواع بلبرینگ و رولبرینگ",
-    description:
-      "مرجع تخصصی فروش بلبرینگ، رولبرینگ و یاتاقان صنعتی با بهترین قیمت و ضمانت اصالت کالا.",
-    url: "https://rollmachine.ir",
-    siteName: "Roll Machine",
-    locale: "fa_IR",
     type: "website",
+    locale: "fa_IR",
+    url: "https://rollmachine.ir",
+    siteName: "رول ماشین",
+
+    title: "رول ماشین | فروش عمده انواع بلبرینگ و رولبرینگ",
+
+    description:
+      "تأمین‌کننده تخصصی انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی از برندهای معتبر جهانی با تضمین اصالت کالا.",
+
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "Roll Machine",
+        alt: "رول ماشین | Roll Machine",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "رول ماشین",
+
+    title: "رول ماشین | Roll Machine",
+
     description:
-      "فروش انواع بلبرینگ، رولبرینگ و قطعات صنعتی",
-    images: ["/og-image.jpg"],
+      "فروش عمده انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی.",
+
+    images: ["/images/logo.png"],
   },
 
   icons: {
@@ -98,7 +117,10 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-}
+
+  category: "Industrial Equipment",
+
+};
 
 export const viewport: Viewport = {
   themeColor: '#1e40af',

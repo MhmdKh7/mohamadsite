@@ -13,6 +13,9 @@ export type BearingArticle = {
   excerpt: string
   intro: string[]
   sections: ArticleSection[]
+  ctaTitle?: string
+  ctaText?: string
+  ctaPhone?: string
 }
 
 export const bearingArticles: BearingArticle[] = [

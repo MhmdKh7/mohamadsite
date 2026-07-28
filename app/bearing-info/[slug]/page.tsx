@@ -181,14 +181,19 @@ export default async function BearingArticlePage({
                 {/* Contact CTA */}
                 <Card className="border-0 bg-secondary text-secondary-foreground">
                   <CardContent className="p-6 text-center">
-                    <h3 className="font-bold mb-2">سوالی دارید؟</h3>
+                    <h3 className="font-bold mb-2">
+                      {article.ctaTitle ?? 'سوالی دارید؟'}
+                    </h3>
+
                     <p className="text-secondary-foreground/70 text-sm mb-4">
-                      کارشناسان ما در انتخاب بهترین محصول شما را راهنمایی می‌کنند.
+                      {article.ctaText ??
+                        'کارشناسان ما در انتخاب بهترین محصول شما را راهنمایی می‌کنند.'}
                     </p>
-                    <a href="tel:09190033560">
+
+                    <a href={`tel:${article.ctaPhone ?? '09122369623'}`}>
                       <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                         <Phone className="ml-2 h-4 w-4" />
-                        ۰۹۱۹۰۰۳۳۵۶۰
+                        {article.ctaPhone ?? '09122369623'}
                       </Button>
                     </a>
                   </CardContent>

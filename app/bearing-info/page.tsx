@@ -1,3 +1,28 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "اطلاعات فنی بلبرینگ",
+  description:
+    "راهنمای تخصصی انتخاب، نگهداری و شناخت انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی.",
+  keywords: [
+    "اطلاعات بلبرینگ",
+    "راهنمای بلبرینگ",
+    "رولبرینگ",
+    "یاتاقان",
+    "قطعات صنعتی",
+  ],
+  alternates: {
+    canonical: "https://rollmachine.ir/bearing-info",
+  },
+  openGraph: {
+    title: "اطلاعات فنی بلبرینگ | رول ماشین",
+    description:
+      "راهنمای تخصصی انتخاب و نگهداری انواع بلبرینگ و رولبرینگ.",
+    url: "https://rollmachine.ir/bearing-info",
+    type: "website",
+  },
+};
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronLeft, BookOpen, Settings, Wrench, AlertTriangle, CheckCircle } from 'lucide-react'
@@ -83,12 +108,11 @@ const guides = [
     icon: AlertTriangle,
   },
 ]
-
 export default function BearingInfoPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      
+
       <main className="flex-1">
         {/* Hero */}
         <section className="bg-primary text-primary-foreground py-16">
@@ -135,13 +159,24 @@ export default function BearingInfoPage() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">انواع بلبرینگ و رولبرینگ</h2>
-              <p className="text-muted-foreground">آشنایی با انواع مختلف بلبرینگ و کاربردهای آن‌ها</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                انواع بلبرینگ و رولبرینگ
+              </h2>
+              <p className="text-muted-foreground">
+                آشنایی با انواع مختلف بلبرینگ و کاربردهای آن‌ها
+              </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {bearingTypes.map((bearing) => (
-                <Link key={bearing.slug} href={`/bearing-info/${bearing.slug}`}>
-                  <Card className="group overflow-hidden h-full hover:shadow-xl transition-all border-0">
+                <Link
+                  key={bearing.slug}
+                  href={`/bearing-info/${bearing.slug}`}
+                  aria-label={`مطالعه مقاله ${bearing.title}`}
+                  title={`مطالعه مقاله ${bearing.title}`}
+                  className="group block"
+                >
+                  <Card className="overflow-hidden h-full hover:shadow-xl transition-all border-0">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={bearing.image}
@@ -149,20 +184,29 @@ export default function BearingInfoPage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
+
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
                       <div className="absolute bottom-4 left-4 right-4">
-                        <p className="text-white/70 text-xs mb-1">{bearing.englishTitle}</p>
-                        <h3 className="font-bold text-white text-lg">{bearing.title}</h3>
+                        <p className="text-white/70 text-xs mb-1">
+                          {bearing.englishTitle}
+                        </p>
+
+                        <h3 className="font-bold text-white text-lg">
+                          {bearing.title}
+                        </h3>
                       </div>
                     </div>
+
                     <CardContent className="p-5">
                       <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
                         {bearing.description}
                       </p>
-                      <div className="flex items-center text-accent text-sm font-medium">
-                        اطلاعات بیشتر
-                        <ChevronLeft className="h-4 w-4 mr-1" />
-                      </div>
+
+                      <span className="inline-flex items-center text-accent text-sm font-medium">
+                        مطالعه مقاله {bearing.title}
+                        <ChevronLeft className="h-4 w-4 mr-1 transition-transform group-hover:-translate-x-1" />
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>

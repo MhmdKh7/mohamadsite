@@ -14,7 +14,7 @@ export default function StructuredData() {
         image: "https://rollmachine.ir/images/logo.png",
 
         description:
-            "فروش تخصصی انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی",
+            "تامین کننده و عمده فروش انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی",
 
         email: "bearing_rollmachine@yahoo.com",
 
@@ -23,7 +23,7 @@ export default function StructuredData() {
         sameAs: [
             "https://www.instagram.com/roll_machiine?igsh=dDU3emxtcmxxdWdt",
             "https://wa.me/989190033560",
-            "https://ble.ir/roll_machiine"
+            "https://ble.ir/roll_machiine",
         ],
 
         contactPoint: [
@@ -32,16 +32,81 @@ export default function StructuredData() {
                 telephone: "+98-912-2369623",
                 contactType: "customer service",
                 areaServed: "IR",
-                availableLanguage: ["fa"]
-            }
+                availableLanguage: ["fa"],
+            },
         ],
 
         address: {
             "@type": "PostalAddress",
             streetAddress:
                 "خ امیرکبیر، خ سعدی جنوبی، کوچه دکتر نفیسی، پاساژ صفا، پلاک ۳/۲",
-            addressCountry: "IR"
-        }
+            addressLocality: "تهران",
+            addressRegion: "تهران",
+            addressCountry: "IR",
+        },
+    };
+
+    const localBusiness = {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "@id": "https://rollmachine.ir/#store",
+
+        name: "رول ماشین",
+
+        url: "https://rollmachine.ir",
+
+        image: "https://rollmachine.ir/images/logo.png",
+
+        logo: "https://rollmachine.ir/images/logo.png",
+
+        description:
+            "عمده فروش و تامین کننده انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی",
+
+        telephone: "+98-21-33948425",
+
+        email: "bearing_rollmachine@yahoo.com",
+
+        priceRange: "$$",
+
+        sameAs: [
+            "https://www.instagram.com/roll_machiine?igsh=dDU3emxtcmxxdWdt",
+            "https://wa.me/989190033560",
+            "https://ble.ir/roll_machiine",
+        ],
+
+        address: {
+            "@type": "PostalAddress",
+            streetAddress:
+                "خ امیرکبیر، خ سعدی جنوبی، کوچه دکتر نفیسی، پاساژ صفا، پلاک ۳/۲",
+            addressLocality: "تهران",
+            addressRegion: "تهران",
+            addressCountry: "IR",
+        },
+
+        geo: {
+            "@type": "GeoCoordinates",
+            latitude: 35.686835,
+            longitude: 51.424224,
+        },
+
+        openingHoursSpecification: [
+            {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                    "Saturday",
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                ],
+                opens: "09:00",
+                closes: "18:00",
+            },
+        ],
+
+        hasMap:
+            "https://maps.app.goo.gl/fV7x5yq3HmvPWNaH7?g_st=ic",
     };
 
     const website = {
@@ -54,10 +119,10 @@ export default function StructuredData() {
         name: "رول ماشین",
 
         publisher: {
-            "@id": "https://rollmachine.ir/#organization"
+            "@id": "https://rollmachine.ir/#organization",
         },
 
-        inLanguage: "fa-IR"
+        inLanguage: "fa-IR",
     };
 
     return (
@@ -66,6 +131,13 @@ export default function StructuredData() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(organization),
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(localBusiness),
                 }}
             />
 
