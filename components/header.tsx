@@ -109,7 +109,7 @@ export function Header() {
             </span>
           </div>
           <div className="text-accent font-medium text-xs sm:text-sm">
-            تمامی کالاها اصل بوده و دارای ضمانت اصالت کالا هستند
+            نمایندگی انحصاری یاتاقان های ZDK در ایران
           </div>
         </div>
       </div>

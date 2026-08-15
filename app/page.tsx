@@ -239,8 +239,8 @@ export default function HomePage() {
                 رول ماشین - Rollmachine
               </p>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
-                مرکز پخش و فروش عمده
-                <span className="block text-accent mt-2">یاتاقان و بلبرینگ اصل</span>
+                نمایندگی انحصاری
+                <span className="block text-accent mt-2"> یاتاقان های ZDK </span>
               </h1>
               <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed">
                 تعمیر و توزیع انواع بلبرینگ، رولبرینگ، تسمه، کاسه نمد | توزیع گریس و روغن صنعتی |
