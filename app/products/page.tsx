@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { SlidersHorizontal, Grid3X3, List, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -141,25 +142,21 @@ const sortOptions = [
   { value: 'name', label: 'نام محصول' },
 ]
 
-export default async function ProductsPage({
-  searchParams,
-}: {
-  searchParams: Promise<{
-    category?: string
-    search?: string
-  }>
-}) {
-  const params = await searchParams
+function ProductsContent() {
+  const searchParams = useSearchParams()
 
-  const initialCategory = params.category || ''
-  const initialSearch = params.search || ''
-
-  const [selectedCategory, setSelectedCategory] = useState(initialCategory)
+  const [selectedCategory, setSelectedCategory] = useState('')
   const [selectedBrands, setSelectedBrands] = useState<string[]>([])
   const [priceRange, setPriceRange] = useState({ min: '', max: '' })
   const [sortBy, setSortBy] = useState('newest')
-  const [searchQuery, setSearchQuery] = useState(initialSearch)
+  const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+
+  // مقداردهی اولیه فیلترها از روی پارامترهای URL
+  useEffect(() => {
+    setSelectedCategory(searchParams.get('category') || '')
+    setSearchQuery(searchParams.get('search') || '')
+  }, [searchParams])
 
   const filteredProducts = useMemo(() => {
     let filtered = [...allProducts]
@@ -420,5 +417,13 @@ export default async function ProductsPage({
 
       <Footer />
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <ProductsContent />
+    </Suspense>
   )
 }

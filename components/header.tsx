@@ -30,34 +30,34 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 
-// دسته‌بندی محصولات - فعلا فقط نمایشی (بدون لینک)
+// دسته‌بندی محصولات - هر مورد به صفحه دسته‌بندی خودش لینک می‌شود
 const categories = [
   // انواع یاتاقان‌های صنعتی
-  { name: 'یاتاقان UC', description: 'یاتاقان UC با کیفیت بالا' },
-  { name: 'یاتاقان UCP', description: 'یاتاقان با پایه UCP' },
-  { name: 'یاتاقان UCF', description: 'یاتاقان چهارگوش UCF' },
-  { name: 'یاتاقان UCT', description: 'یاتاقان کشویی UCT' },
-  { name: 'یاتاقان UCFC', description: 'یاتاقان فلنجی UCFC' },
-  { name: 'یاتاقان UCPA', description: 'یاتاقان قابل تنظیم UCPA' },
-  { name: 'یاتاقان SA', description: 'یاتاقان SA' },
-  { name: 'یاتاقان UK', description: 'یاتاقان UK' },
-  { name: 'یاتاقان SN', description: 'یاتاقان SN' },
-  { name: 'یاتاقان SNL', description: 'یاتاقان SNL' },
+  { name: 'یاتاقان UC', description: 'یاتاقان UC با کیفیت بالا', slug: 'uc' },
+  { name: 'یاتاقان UCP', description: 'یاتاقان با پایه UCP', slug: 'ucp' },
+  { name: 'یاتاقان UCF', description: 'یاتاقان چهارگوش UCF', slug: 'ucf' },
+  { name: 'یاتاقان UCT', description: 'یاتاقان کشویی UCT', slug: 'uct' },
+  { name: 'یاتاقان UCFC', description: 'یاتاقان فلنجی UCFC', slug: 'ucfc' },
+  { name: 'یاتاقان UCPA', description: 'یاتاقان قابل تنظیم UCPA', slug: 'ucpa' },
+  { name: 'یاتاقان SA', description: 'یاتاقان SA', slug: 'sa' },
+  { name: 'یاتاقان UK', description: 'یاتاقان UK', slug: 'uk' },
+  { name: 'یاتاقان SN', description: 'یاتاقان SN', slug: 'sn' },
+  { name: 'یاتاقان SNL', description: 'یاتاقان SNL', slug: 'snl' },
   // ملزومات صنعتی
-  { name: 'بلبرینگ', description: 'انواع بلبرینگ شیار عمیق' },
-  { name: 'رولبرینگ', description: 'رولبرینگ مخروطی و استوانه‌ای' },
-  { name: 'تسمه', description: 'تسمه‌های صنعتی' },
-  { name: 'کاسه نمد', description: 'انواع کاسه نمد و آب‌بندی' },
+  { name: 'بلبرینگ', description: 'انواع بلبرینگ شیار عمیق', slug: 'ball-bearing' },
+  { name: 'رولبرینگ', description: 'رولبرینگ مخروطی و استوانه‌ای', slug: 'roller-bearing' },
+  { name: 'تسمه', description: 'تسمه‌های صنعتی', slug: 'belt' },
+  { name: 'کاسه نمد', description: 'انواع کاسه نمد و آب‌بندی', slug: 'oil-seal' },
   // روان‌کننده‌ها
-  { name: 'گریس', description: 'انواع گریس صنعتی' },
-  { name: 'روغن صنعتی', description: 'روغن‌های صنعتی' },
-  { name: 'چسب صنعتی', description: 'چسب‌های صنعتی' },
+  { name: 'گریس', description: 'انواع گریس صنعتی', slug: 'grease' },
+  { name: 'روغن صنعتی', description: 'روغن‌های صنعتی', slug: 'oil' },
+  { name: 'چسب صنعتی', description: 'چسب‌های صنعتی', slug: 'glue' },
   // واشر و آب‌بندی
-  { name: 'پکینگ', description: 'انواع پکینگ سفارشی' },
-  { name: 'اورینگ', description: 'انواع اورینگ' },
-  { name: 'تفلون', description: 'ورق و نوار تفلون' },
+  { name: 'پکینگ', description: 'انواع پکینگ سفارشی', slug: 'packing' },
+  { name: 'اورینگ', description: 'انواع اورینگ', slug: 'oring' },
+  { name: 'تفلون', description: 'ورق و نوار تفلون', slug: 'teflon' },
   // سایر
-  { name: 'پیچ و مهره', description: 'پیچ، مهره، واشر، خار، پولی' },
+  { name: 'پیچ و مهره', description: 'پیچ، مهره، واشر، خار، پولی', slug: 'bolt-nut' },
 ]
 
 const bearingInfoItems = [
@@ -108,9 +108,9 @@ export function Header() {
               خ امیرکبیر، خ سعدی جنوبی، کوچه دکتر نفیسی، پاساژ صفا
             </span>
           </div>
-          <div className="text-accent font-medium text-xs sm:text-sm">
+          <a href="/brand/zdk" className="text-accent font-medium text-xs sm:text-sm">
             نمایندگی انحصاری یاتاقان های ZDK در ایران
-          </div>
+          </a>
         </div>
       </div>
 
@@ -198,9 +198,11 @@ export function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto">
                   {categories.map((cat) => (
-                    <DropdownMenuItem key={cat.name} className="flex flex-col items-start py-3 cursor-default focus:bg-muted">
-                      <span className="font-medium">{cat.name}</span>
-                      <span className="text-xs text-muted-foreground">{cat.description}</span>
+                    <DropdownMenuItem key={cat.slug} asChild className="cursor-pointer">
+                      <Link href={`/category/${cat.slug}`} className="flex flex-col items-start py-3">
+                        <span className="font-medium">{cat.name}</span>
+                        <span className="text-xs text-muted-foreground">{cat.description}</span>
+                      </Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -287,12 +289,14 @@ export function Header() {
                   دسته‌بندی محصولات
                 </p>
                 {categories.map((category) => (
-                  <span
-                    key={category.name}
-                    className="block py-2 px-4 text-muted-foreground"
+                  <Link
+                    key={category.slug}
+                    href={`/category/${category.slug}`}
+                    className="block py-2 px-4 text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {category.name}
-                  </span>
+                  </Link>
                 ))}
               </li>
 

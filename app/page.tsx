@@ -240,7 +240,8 @@ export default function HomePage() {
               </p>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
                 نمایندگی انحصاری
-                <span className="block text-accent mt-2"> یاتاقان های ZDK </span>
+                <span className="block text-accent mt-2">یاتاقان های ZDK</span>
+                
               </h1>
               <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed">
                 تعمیر و توزیع انواع بلبرینگ، رولبرینگ، تسمه، کاسه نمد | توزیع گریس و روغن صنعتی |
@@ -274,25 +275,27 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
               {categories.map((category) => (
-                <Card key={category.slug} className="group overflow-hidden hover:shadow-xl transition-all duration-300 h-full border-0 hover-lift bg-primary">
-                  <div className="relative aspect-square">
-                    <Image
-                      src={category.image}
-                      alt={category.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-30"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                      <p className="text-primary-foreground/70 text-xs mb-1 uppercase tracking-wider">
-                        {category.englishName}
-                      </p>
-                      <h3 className="font-bold text-primary-foreground text-lg md:text-xl mb-2">
-                        {category.name}
-                      </h3>
-                      <div className="w-12 h-0.5 bg-accent mx-auto" />
+                <Link key={category.slug} href={`/category/${category.slug}`} className="block h-full">
+                  <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 h-full border-0 hover-lift bg-primary cursor-pointer">
+                    <div className="relative aspect-square">
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-30"
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                        <p className="text-primary-foreground/70 text-xs mb-1 uppercase tracking-wider">
+                          {category.englishName}
+                        </p>
+                        <h3 className="font-bold text-primary-foreground text-lg md:text-xl mb-2">
+                          {category.name}
+                        </h3>
+                        <div className="w-12 h-0.5 bg-accent mx-auto" />
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -369,9 +372,35 @@ export default function HomePage() {
         <section className="py-16 md:py-20 bg-card">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">برندهای معتبر</h2>
-              <p className="text-muted-foreground">نماینده رسمی برندهای معتبر جهانی</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Global Brands </h2>
+              
             </div>
+
+            {/* Featured Brand: ZDK */}
+            <Link href="/brand/zdk" className="block mb-10 group">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-l from-primary to-secondary border border-border">
+                <div className="accent-line" />
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-8 md:p-10">
+                  <div className="text-center md:text-right">
+                    <p className="text-accent font-medium mb-2">برند انحصاری </p>
+                    <span className="block text-5xl md:text-7xl font-black text-primary-foreground tracking-tight leading-none">
+                      ZDK
+                    </span>
+                    <p className="text-primary-foreground/80 mt-4 max-w-xl leading-relaxed">
+                      بلبرینگ و یاتاقان‌های ZDK با کیفیت مطمئن و قیمت مناسب          
+                    </p>
+                  </div>
+                  <Button
+                    size="lg"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8 flex-shrink-0"
+                  >
+                    معرفی برند ZDK
+                    <ChevronLeft className="h-5 w-5 mr-1" />
+                  </Button>
+                </div>
+              </div>
+            </Link>
+
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
               {['SKF', 'FAG', 'NSK', 'Timken', 'NTN', 'Koyo', 'INA', 'IKO', 'NMB', 'NACHI', 'THK', 'SNR'].map((brand) => (
                 <div
