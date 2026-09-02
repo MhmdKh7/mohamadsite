@@ -24,11 +24,23 @@ export async function generateMetadata({
   const { slug } = await params
   const article = getArticleBySlug(slug)
   if (!article) {
-    return { title: 'مقاله یافت نشد | رول ماشین' }
+    return {
+      title: 'مقاله یافت نشد',
+      robots: { index: false, follow: false },
+    }
   }
   return {
-    title: `${article.title} | رول ماشین`,
+    title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `https://rollmachine.ir/bearing-info/${slug}`,
+    },
+    openGraph: {
+      title: `${article.title} | رول ماشین`,
+      description: article.excerpt,
+      url: `https://rollmachine.ir/bearing-info/${slug}`,
+      type: 'article',
+    },
   }
 }
 
