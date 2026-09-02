@@ -68,7 +68,7 @@ export default async function BearingArticlePage({
         {/* Hero */}
         <section className="relative bg-primary text-primary-foreground">
           <div className="absolute inset-0 opacity-20">
-            <Image src={article.image} alt={article.title} fill className="object-cover" />
+            <Image src={article.image} alt={article.title} fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-l from-primary/95 to-secondary/90" />
           <div className="container mx-auto px-4 py-14 md:py-20 relative z-10">
@@ -101,7 +101,7 @@ export default async function BearingArticlePage({
               {/* Article body */}
               <article className="lg:col-span-2 space-y-8">
                 <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden border border-border">
-                  <Image src={article.image} alt={article.title} fill className="object-cover" />
+                  <Image src={article.image} alt={article.title} fill sizes="100vw" className="object-cover" />
                 </div>
 
                 <div className="space-y-4">
