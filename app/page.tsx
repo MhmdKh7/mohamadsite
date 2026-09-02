@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "رول ماشین | عمده فروش انواع بلبرینگ و رولبرینگ",
+  title: { absolute: "رول ماشین | عمده فروش انواع بلبرینگ و رولبرینگ" },
   description:
     "رول ماشین، تأمین‌کننده و عمده‌فروش انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی از برندهای معتبر دنیا.",
   alternates: {
@@ -13,6 +13,9 @@ export const metadata: Metadata = {
       "تأمین انواع بلبرینگ، رولبرینگ و یاتاقان صنعتی با ضمانت اصالت کالا.",
     url: "https://rollmachine.ir",
     type: "website",
+    locale: "fa_IR",
+    siteName: "رول ماشین",
+    images: [{ url: "/images/logo.png", width: 1200, height: 630, alt: "رول ماشین | Roll Machine" }],
   },
 };
 import Link from 'next/link'
