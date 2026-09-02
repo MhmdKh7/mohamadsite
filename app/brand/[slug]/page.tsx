@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import BrandClient from "./BrandClient";
 
 type Props = {
@@ -78,6 +79,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page() {
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  if (!brandInfo[slug.toLowerCase()]) notFound();
   return <BrandClient />;
 }
