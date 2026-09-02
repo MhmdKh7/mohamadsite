@@ -95,7 +95,7 @@ export function Header() {
       <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-2.5 flex items-center justify-between text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:02133948425" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:02133948425" aria-label="تماس با فروشگاه ۰۲۱-۳۳۹۴۸۴۲۵" className="flex items-center gap-2 hover:text-accent transition-colors min-h-11">
               <Phone className="h-4 w-4" />
               <span className="hidden sm:inline">۰۲۱-۳۳۹۴۸۴۲۵</span>
             </a>
@@ -130,6 +130,7 @@ export function Header() {
                   width={48}
                   height={48}
                   className="object-contain"
+                  sizes="48px"
                   priority
                 />
               </div>
@@ -170,6 +171,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
+                aria-label={mobileMenuOpen ? "بستن منو" : "باز کردن منو"}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
