@@ -21,7 +21,7 @@ export default function StructuredData() {
         telephone: "+98-21-33948425",
 
         sameAs: [
-            "https://www.instagram.com/roll_machiine?igsh=dDU3emxtcmxxdWdt",
+            "https://www.instagram.com/roll_machiine",
             "https://wa.me/989190033560",
             "https://ble.ir/roll_machiine",
         ],
@@ -69,7 +69,7 @@ export default function StructuredData() {
         priceRange: "$$",
 
         sameAs: [
-            "https://www.instagram.com/roll_machiine?igsh=dDU3emxtcmxxdWdt",
+            "https://www.instagram.com/roll_machiine",
             "https://wa.me/989190033560",
             "https://ble.ir/roll_machiine",
         ],
@@ -125,6 +125,37 @@ export default function StructuredData() {
         inLanguage: "fa-IR",
     };
 
+    const faqPage = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "آیا امکان خرید عمده وجود دارد؟",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "بله، برای خرید عمده با تخفیف ویژه با بخش فروش تماس بگیرید.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "زمان ارسال سفارشات چقدر است؟",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "سفارشات معمولا ظرف 24 تا 48 ساعت کاری ارسال می‌شوند.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "آیا محصولات گارانتی دارند؟",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "بله، تمامی محصولات دارای گارانتی اصالت هستند.",
+                },
+            },
+        ],
+    };
+
     return (
         <>
             <script
@@ -145,6 +176,13 @@ export default function StructuredData() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(website),
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(faqPage),
                 }}
             />
         </>
