@@ -134,7 +134,7 @@ export function Header() {
                 />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-foreground">رول ماشین</h1>
+                <span className="text-xl font-bold text-foreground">رول ماشین</span>
                 <p className="text-xs text-muted-foreground">Rollmachine - مرکز پخش یاتاقان و بلبرینگ</p>
               </div>
             </Link>
