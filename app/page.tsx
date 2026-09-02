@@ -360,7 +360,7 @@ export default function HomePage() {
                     </ul>
                     <Link href={`/bearing-info/${bearing.slug}`}>
                       <Button variant="link" className="p-0 h-auto mt-3 text-accent">
-                        اطلاعات بیشتر
+                        اطلاعات بیشتر درباره {bearing.title}
                         <ChevronLeft className="h-4 w-4 mr-1" />
                       </Button>
                     </Link>
