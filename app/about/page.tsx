@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "آشنایی با رول ماشین و خدمات تأمین انواع بلبرینگ و قطعات صنعتی.",
     url: "https://rollmachine.ir/about",
     type: "website",
+    images: [{ url: "/images/logo.png" }],
   },
 };
 
