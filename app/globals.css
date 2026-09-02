@@ -207,6 +207,14 @@
   color: #dc2626 !important;
 }
 
+/* WCAG AA: #dc2626 on #1a1a1a is ~3.6:1. Lighter red on dark surfaces. */
+footer .text-accent,
+.bg-primary .text-accent,
+.from-primary .text-accent,
+.text-primary-foreground .text-accent {
+  color: #f87171 !important;
+}
+
 .border-accent {
   border-color: #dc2626 !important;
 }
