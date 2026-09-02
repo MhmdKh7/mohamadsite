@@ -14,7 +14,7 @@ export async function generateMetadata({
 
   if (!info) {
     return {
-      title: "دسته‌بندی محصولات | رول ماشین",
+      title: "دسته‌بندی محصولات",
       description:
         "مشاهده دسته‌بندی محصولات صنعتی در رول ماشین.",
       robots: {
@@ -24,7 +24,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${info.name} | خرید و استعلام قیمت | رول ماشین`;
+  const title = `${info.name} | خرید و استعلام قیمت`;
 
   const description =
     `${info.tagline} مشاهده مشخصات، کاربردها و دریافت مشاوره و استعلام قیمت ${info.name} از رول ماشین.`;
@@ -38,7 +38,7 @@ export async function generateMetadata({
     },
 
     openGraph: {
-      title,
+      title: `${title} | رول ماشین`,
       description,
       url: `https://rollmachine.ir/category/${slug}`,
       type: "website",
@@ -48,7 +48,7 @@ export async function generateMetadata({
 
     twitter: {
       card: "summary_large_image",
-      title,
+      title: `${title} | رول ماشین`,
       description,
     },
 
