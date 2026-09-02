@@ -23,10 +23,10 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-primary-foreground">رول ماشین</h3>
-                <p className="text-xs text-primary-foreground/70">Rollmachine - مرکز پخش یاتاقان و بلبرینگ</p>
+                <p className="text-xs text-primary-foreground/90">Rollmachine - مرکز پخش یاتاقان و بلبرینگ</p>
               </div>
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
+            <p className="text-primary-foreground text-sm leading-relaxed mb-6">
               تهیه و توزیع انواع بلبرینگ، رولبرینگ، تسمه و کاسه نمد |
               توزیع گریس، روغن و چسب صنعتی |
               ساخت پکینگ، اورینگ و تفلون سفارشی |
@@ -37,25 +37,28 @@ export function Footer() {
                 href="https://www.instagram.com/roll_machiine?igsh=dDU3emxtcmxxdWdt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                aria-label="اینستاگرام رول ماشین"
+                className="w-11 h-11 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
                 href="https://ble.ir/roll_machiine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                aria-label="بله رول ماشین"
+                className="w-11 h-11 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
               >
-                <Send className="h-5 w-5" />
+                <Send className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
                 href="https://wa.me/989190033560"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                aria-label="واتساپ رول ماشین"
+                className="w-11 h-11 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
               >
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -65,25 +68,25 @@ export function Footer() {
             <h4 className="text-lg font-bold mb-6 text-primary-foreground">دسترسی سریع</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-2">
+                <Link href="/" className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   صفحه اصلی
                 </Link>
               </li>
               <li>
-                <Link href="/bearing-info" className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-2">
+                <Link href="/bearing-info" className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   آشنایی با بلبرینگ‌ها
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-2">
+                <Link href="/about" className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   درباره ما
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center gap-2">
+                <Link href="/contact" className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   تماس با ما
                 </Link>
@@ -143,7 +146,7 @@ export function Footer() {
                   <Phone className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-primary-foreground/60">شماره ثابت</p>
+                  <p className="text-xs text-primary-foreground/80">شماره ثابت</p>
                   <a href="tel:02133948425" className="text-primary-foreground hover:text-accent transition-colors font-medium">
                     ۰۲۱-۳۳۹۴۸۴۲۵
                   </a>
@@ -154,11 +157,11 @@ export function Footer() {
                   <Phone className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-primary-foreground/60">شماره همراه</p>
+                  <p className="text-xs text-primary-foreground/80">شماره همراه</p>
                   <a href="tel:09190033560" className="text-primary-foreground hover:text-accent transition-colors font-medium">
                     09190033560
                   </a>
-                  <gap className="mx-2 text-primary-foreground/60">|</gap>
+                  <span className="mx-2 text-primary-foreground" aria-hidden="true">|</span>
 
                   <a href="tel:09122369623" className="text-primary-foreground hover:text-accent transition-colors font-medium">
                     09122369623
@@ -170,7 +173,7 @@ export function Footer() {
                   <Mail className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-primary-foreground/60">ایمیل</p>
+                  <p className="text-xs text-primary-foreground/80">ایمیل</p>
                   <a href="mailto:bearing_rollmachine@yahoo.com" className="text-primary-foreground hover:text-accent transition-colors font-medium text-sm">
                     bearing_rollmachine@yahoo.com
                   </a>
@@ -181,7 +184,7 @@ export function Footer() {
                   <MapPin className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-primary-foreground/60">آدرس</p>
+                  <p className="text-xs text-primary-foreground/80">آدرس</p>
                   <p className="text-primary-foreground/90 text-sm">
                     خ امیرکبیر، خ سعدی جنوبی، کوچه دکتر نفیسی، پاساژ صفا، پلاک ۳/۲
                   </p>
@@ -196,10 +199,10 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10 bg-black/20">
         <div className="container mx-auto px-4 py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-primary-foreground/60 text-sm text-center md:text-right">
+            <p className="text-primary-foreground/80 text-sm text-center md:text-right">
               تمامی حقوق این سایت متعلق به <span className="text-accent font-medium">فروشگاه رول ماشین (Rollmachine)</span> می‌باشد. &copy; ۱۴۰۳
             </p>
-            <a href="https://t.me/Mhmd_Kh_7" className="text-primary-foreground/50 text-xs hover:text-accent transition-colors">
+            <a href="https://t.me/Mhmd_Kh_7" className="text-primary-foreground/80 text-xs hover:text-accent transition-colors">
               By МохаммадРезаХадеми
             </a>
           </div>
