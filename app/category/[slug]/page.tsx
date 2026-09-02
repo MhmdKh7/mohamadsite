@@ -1,21 +1,63 @@
 import type { Metadata } from "next";
 import CategoryClient from "./CategoryClient";
+import { getCategoryInfo } from "@/lib/category-info";
 
-export const metadata: Metadata = {
-  title: "دسته‌بندی محصولات",
-  description:
-    "مشاهده دسته‌بندی انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی در رول ماشین.",
-  alternates: {
-    canonical: "https://rollmachine.ir/category",
-  },
-  openGraph: {
-    title: "دسته‌بندی محصولات | رول ماشین",
-    description:
-      "دسته‌بندی انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی.",
-    url: "https://rollmachine.ir/category",
-    type: "website",
-  },
+type Props = {
+  params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const info = getCategoryInfo(slug);
+
+  if (!info) {
+    return {
+      title: "دسته‌بندی محصولات | رول ماشین",
+      description:
+        "مشاهده دسته‌بندی محصولات صنعتی در رول ماشین.",
+      robots: {
+        index: false,
+        follow: true,
+      },
+    };
+  }
+
+  const title = `${info.name} | خرید و استعلام قیمت | رول ماشین`;
+
+  const description =
+    `${info.tagline} مشاهده مشخصات، کاربردها و دریافت مشاوره و استعلام قیمت ${info.name} از رول ماشین.`;
+
+  return {
+    title,
+    description,
+
+    alternates: {
+      canonical: `https://rollmachine.ir/category/${slug}`,
+    },
+
+    openGraph: {
+      title,
+      description,
+      url: `https://rollmachine.ir/category/${slug}`,
+      type: "website",
+      locale: "fa_IR",
+      siteName: "رول ماشین",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function Page() {
   return <CategoryClient />;
