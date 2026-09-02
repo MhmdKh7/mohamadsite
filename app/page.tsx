@@ -227,15 +227,7 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/95 to-secondary/95" />
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: 'url(/images/hero-bg.jpg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
+          <div className="absolute inset-0 bg-gradient-to-l from-primary to-secondary" />
           <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
             <div className="text-center text-primary-foreground max-w-4xl mx-auto">
               <p className="text-accent text-lg md:text-xl font-medium mb-4">
@@ -285,6 +277,7 @@ export default function HomePage() {
                         src={category.image}
                         alt={category.name}
                         fill
+                        sizes="(max-width: 768px) 50vw, 16vw"
                         className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-30"
                       />
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
@@ -338,6 +331,7 @@ export default function HomePage() {
                       src={bearing.image}
                       alt={bearing.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -358,11 +352,12 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
-                    <Link href={`/bearing-info/${bearing.slug}`}>
-                      <Button variant="link" className="p-0 h-auto mt-3 text-accent">
-                        اطلاعات بیشتر درباره {bearing.title}
-                        <ChevronLeft className="h-4 w-4 mr-1" />
-                      </Button>
+                    <Link
+                      href={`/bearing-info/${bearing.slug}`}
+                      className="inline-flex items-center min-h-11 mt-3 py-2 text-accent font-medium"
+                    >
+                      اطلاعات بیشتر درباره {bearing.title}
+                      <ChevronLeft className="h-4 w-4 mr-1" aria-hidden="true" />
                     </Link>
                   </CardContent>
                 </Card>
