@@ -63,10 +63,6 @@ export const metadata: Metadata = {
 
   publisher: "رول ماشین",
 
-  alternates: {
-    canonical: "https://rollmachine.ir",
-  },
-
   robots: {
     index: true,
     follow: true,
