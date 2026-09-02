@@ -402,19 +402,36 @@ export default function HomePage() {
             </Link>
 
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
-              {['SKF', 'FAG', 'NSK', 'Timken', 'NTN', 'Koyo', 'INA', 'IKO', 'NMB', 'NACHI', 'THK', 'SNR'].map((brand) => (
-                <div
-                  key={brand}
-                  className="group relative rounded-xl bg-background border-2 border-border p-6 md:p-8 flex items-center justify-center transition-all duration-300 cursor-pointer hover:border-accent hover:shadow-lg hover:-translate-y-1"
-                >
-                  <span className="absolute top-2 right-3 text-accent opacity-0 group-hover:opacity-100 transition-opacity text-lg leading-none">
-                    ٭
-                  </span>
-                  <span className="text-xl md:text-2xl font-bold text-muted-foreground group-hover:text-accent transition-colors">
-                    {brand}
-                  </span>
-                </div>
-              ))}
+              {['SKF', 'FAG', 'NSK', 'Timken', 'NTN', 'Koyo', 'INA', 'IKO', 'NMB', 'NACHI', 'THK', 'SNR'].map((brand) => {
+                const hasBrandPage = ['SKF', 'FAG', 'NSK', 'Timken', 'NTN', 'Koyo', 'INA'].includes(brand)
+                const tileClassName = "group relative rounded-xl bg-background border-2 border-border p-6 md:p-8 flex items-center justify-center transition-all duration-300 hover:border-accent hover:shadow-lg hover:-translate-y-1"
+                const tileInner = (
+                  <>
+                    <span className="absolute top-2 right-3 text-accent opacity-0 group-hover:opacity-100 transition-opacity text-lg leading-none">
+                      ٭
+                    </span>
+                    <span className="text-xl md:text-2xl font-bold text-muted-foreground group-hover:text-accent transition-colors">
+                      {brand}
+                    </span>
+                  </>
+                )
+                if (hasBrandPage) {
+                  return (
+                    <Link
+                      key={brand}
+                      href={`/brand/${brand.toLowerCase()}`}
+                      className={tileClassName}
+                    >
+                      {tileInner}
+                    </Link>
+                  )
+                }
+                return (
+                  <div key={brand} className={tileClassName}>
+                    {tileInner}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
