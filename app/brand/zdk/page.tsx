@@ -16,7 +16,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "برند ZDK | معرفی بلبرینگ و یاتاقان ZDK - رول ماشین",
+  title: "برند ZDK | معرفی بلبرینگ و یاتاقان ZDK",
   description:
     "معرفی کامل برند ZDK؛ تولیدکننده انواع بلبرینگ، رولبرینگ و یاتاقان صنعتی با کیفیت مطمئن و قیمت مناسب. خرید عمده محصولات ZDK از رول ماشین.",
   alternates: {
