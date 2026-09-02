@@ -63,5 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...categoryRoutes, ...articleRoutes];
+  const brandRoutes: MetadataRoute.Sitemap = ["skf", "fag", "nsk", "timken", "ntn", "koyo", "ina"].map((slug) => ({ url: `${baseUrl}/brand/${slug}`, lastModified, changeFrequency: "monthly", priority: 0.7 }));
+  return [...staticRoutes, ...categoryRoutes, ...articleRoutes, ...brandRoutes];
 }
