@@ -196,13 +196,13 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-primary-foreground/10 bg-black/20">
+      <div className="border-t border-primary-foreground/20">
         <div className="container mx-auto px-4 py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-primary-foreground/80 text-sm text-center md:text-right">
-              تمامی حقوق این سایت متعلق به <span className="text-accent font-medium">فروشگاه رول ماشین (Rollmachine)</span> می‌باشد. &copy; ۱۴۰۳
+            <p className="text-primary-foreground text-sm text-center md:text-right">
+              تمامی حقوق این سایت متعلق به <span className="text-[#f87171] font-medium">فروشگاه رول ماشین (Rollmachine)</span> می‌باشد. &copy; ۱۴۰۳
             </p>
-            <a href="https://t.me/Mhmd_Kh_7" className="text-primary-foreground/80 text-xs hover:text-accent transition-colors">
+            <a href="https://t.me/Mhmd_Kh_7" className="text-primary-foreground text-xs hover:text-[#f87171] transition-colors">
               By МохаммадРезаХадеми
             </a>
           </div>
