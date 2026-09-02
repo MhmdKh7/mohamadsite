@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "اطلاعات تماس و راه‌های ارتباط با رول ماشین.",
     url: "https://rollmachine.ir/contact",
     type: "website",
+    images: [{ url: "/images/logo.png" }],
   },
 };
 
