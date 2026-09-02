@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "مشاهده انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی در رول ماشین.",
     url: "https://rollmachine.ir/products",
     type: "website",
+    images: [{ url: "/images/logo.png" }],
   },
   robots: {
     index: true,
