@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import CategoryClient from "./CategoryClient";
 import { getCategoryInfo } from "@/lib/category-info";
 
@@ -59,6 +60,8 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  if (!getCategoryInfo(slug)) notFound();
   return <CategoryClient />;
 }
