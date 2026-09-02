@@ -3,7 +3,6 @@ import "@/lib/firebase";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Vazirmatn } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 
@@ -136,7 +135,6 @@ export default function RootLayout({
         <StructuredData />
         {children}
         <Toaster position="top-center" />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
 
       <GoogleAnalytics gaId="G-PVGTJTZ2LV" />
