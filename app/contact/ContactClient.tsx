@@ -36,7 +36,7 @@ const contactInfo = [
     {
         icon: Mail,
         title: "ایمیل",
-        details: ["bearing_rollmachine@yahoo.com"],
+        details: ["rollmachine.bearing@gmail.com"],
         description: "پاسخگویی در کمتر از ۲۴ ساعت",
     },
     {
