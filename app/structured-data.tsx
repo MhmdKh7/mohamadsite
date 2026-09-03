@@ -16,7 +16,7 @@ export default function StructuredData() {
         description:
             "تامین کننده و عمده فروش انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی",
 
-        email: "bearing_rollmachine@yahoo.com",
+        email: "rollmachine.bearing@gmail.com",
 
         telephone: "+98-21-33948425",
 
@@ -64,7 +64,7 @@ export default function StructuredData() {
 
         telephone: "+98-21-33948425",
 
-        email: "bearing_rollmachine@yahoo.com",
+        email: "rollmachine.bearing@gmail.com",
 
         priceRange: "$$",
 
