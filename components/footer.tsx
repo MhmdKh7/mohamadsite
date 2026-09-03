@@ -174,8 +174,8 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-primary-foreground/80">ایمیل</p>
-                  <a href="mailto:bearing_rollmachine@yahoo.com" className="text-primary-foreground hover:text-accent transition-colors font-medium text-sm">
-                    bearing_rollmachine@yahoo.com
+                  <a href="mailto:rollmachine.bearing@gmail.com" className="text-primary-foreground hover:text-accent transition-colors font-medium text-sm">
+                    rollmachine.bearing@gmail.com
                   </a>
                 </div>
               </li>
