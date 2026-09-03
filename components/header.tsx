@@ -99,9 +99,9 @@ export function Header() {
               <Phone className="h-4 w-4" />
               <span className="hidden sm:inline">۰۲۱-۳۳۹۴۸۴۲۵</span>
             </a>
-            <a href="mailto:bearing_rollmachine@yahoo.com" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:rollmachine.bearing@gmail.com" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
-              <span>bearing_rollmachine@yahoo.com</span>
+              <span>rollmachine.bearing@gmail.com</span>
             </a>
             <span className="hidden lg:flex items-center gap-2 text-primary-foreground/70">
               <MapPin className="h-4 w-4" />
