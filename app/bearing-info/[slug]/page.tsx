@@ -202,10 +202,10 @@ export default async function BearingArticlePage({
                         'کارشناسان ما در انتخاب بهترین محصول شما را راهنمایی می‌کنند.'}
                     </p>
 
-                    <a href={`tel:${article.ctaPhone ?? '09122369623'}`}>
+                    <a href={`tel:${article.ctaPhone ?? '09122366923'}`}>
                       <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                         <Phone className="ml-2 h-4 w-4" />
-                        {article.ctaPhone ?? '09122369623'}
+                        {article.ctaPhone ?? '09122366923'}
                       </Button>
                     </a>
                   </CardContent>
