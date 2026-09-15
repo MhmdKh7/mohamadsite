@@ -22,7 +22,7 @@ const contactInfo = [
     {
         icon: Phone,
         title: "تلفن همراه",
-        details: ["09190033560", "09122369623"],
+        details: ["09122366923"],
         description: "پشتیبانی و مشاوره",
     },
     {
@@ -42,7 +42,7 @@ const contactInfo = [
 const socialLinks = [
     { icon: Instagram, name: "اینستاگرام", url: "https://www.instagram.com/roll_machiine?igsh=dDU3emxtcmxxdWdt", color: "bg-pink-500" },
     { icon: MessageCircle, name: "بله", url: "https://ble.ir/roll_machiine", color: "bg-blue-500" },
-    { icon: MessageCircle, name: "واتساپ", url: "https://wa.me/989190033560", color: "bg-green-500" },
+    { icon: MessageCircle, name: "واتساپ", url: "https://wa.me/989122366923", color: "bg-green-500" },
 ];
 
 const mapQuery = "پاساژ صفا، کوچه دکتر نفیسی، خیابان سعدی جنوبی، تهران";
@@ -166,11 +166,11 @@ export default function ContactPage() {
                                     ۰۲۱-۳۳۹۴۸۴۲۵
                                 </a>
                                 <a
-                                    href="tel:09122369623"
+                                    href="tel:09122366923"
                                     className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors min-h-11"
                                 >
                                     <Phone className="h-5 w-5" aria-hidden="true" />
-                                    09122369623
+                                    09122366923
                                 </a>
                             </div>
                         </div>
