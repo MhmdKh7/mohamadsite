@@ -22,14 +22,14 @@ export default function StructuredData() {
 
         sameAs: [
             "https://www.instagram.com/roll_machiine",
-            "https://wa.me/989190033560",
+            "https://wa.me/989122366923",
             "https://ble.ir/roll_machiine",
         ],
 
         contactPoint: [
             {
                 "@type": "ContactPoint",
-                telephone: "+98-912-2369623",
+                telephone: "+98-912-2366923",
                 contactType: "customer service",
                 areaServed: "IR",
                 availableLanguage: ["fa"],
@@ -70,7 +70,7 @@ export default function StructuredData() {
 
         sameAs: [
             "https://www.instagram.com/roll_machiine",
-            "https://wa.me/989190033560",
+            "https://wa.me/989122366923",
             "https://ble.ir/roll_machiine",
         ],
 
