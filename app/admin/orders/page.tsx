@@ -38,7 +38,7 @@ const initialOrders: Order[] = [
     id: 'BRG-1234',
     customer: 'علی محمدی',
     email: 'ali@example.com',
-    phone: '09123456789',
+    phone: '09122366923',
     address: 'تهران، خیابان آزادی، پلاک ۱۲۳',
     items: [
       { name: 'بلبرینگ SKF 6205', quantity: 5, price: 850000 },
@@ -52,7 +52,7 @@ const initialOrders: Order[] = [
     id: 'BRG-1235',
     customer: 'مریم احمدی',
     email: 'maryam@example.com',
-    phone: '09121234567',
+    phone: '09122366923',
     address: 'اصفهان، خیابان چهارباغ، پلاک ۴۵۶',
     items: [
       { name: 'یاتاقان FAG UCP205', quantity: 3, price: 1850000 },
@@ -65,7 +65,7 @@ const initialOrders: Order[] = [
     id: 'BRG-1236',
     customer: 'رضا کریمی',
     email: 'reza@example.com',
-    phone: '09129876543',
+    phone: '09122366923',
     address: 'شیراز، خیابان زند، پلاک ۷۸۹',
     items: [
       { name: 'بلبرینگ NSK 6206', quantity: 10, price: 920000 },
@@ -78,7 +78,7 @@ const initialOrders: Order[] = [
     id: 'BRG-1237',
     customer: 'فاطمه حسینی',
     email: 'fatemeh@example.com',
-    phone: '09127654321',
+    phone: '09122366923',
     address: 'مشهد، بلوار وکیل‌آباد، پلاک ۱۱۱',
     items: [
       { name: 'کاسه نمد SKF', quantity: 20, price: 180000 },
