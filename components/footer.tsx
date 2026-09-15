@@ -52,7 +52,7 @@ export function Footer() {
                 <Send className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
-                href="https://wa.me/989190033560"
+                href="https://wa.me/989122366923"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="واتساپ رول ماشین"
@@ -158,13 +158,8 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-primary-foreground/80">شماره همراه</p>
-                  <a href="tel:09190033560" className="text-primary-foreground hover:text-accent transition-colors font-medium">
-                    09190033560
-                  </a>
-                  <span className="mx-2 text-primary-foreground" aria-hidden="true">|</span>
-
-                  <a href="tel:09122369623" className="text-primary-foreground hover:text-accent transition-colors font-medium">
-                    09122369623
+                  <a href="tel:09122366923" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+                    09122366923
                   </a>
                 </div>
               </li>
