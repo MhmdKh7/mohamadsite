@@ -466,10 +466,10 @@ export default function HomePage() {
                   تماس با کارشناسان
                 </Button>
               </Link>
-              <a href="tel:09190033560">
+              <a href="tel:09122366923">
                 <Button size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent font-bold">
                   <Phone className="ml-2 h-5 w-5" />
-                  ۰۹۱۹۰۰۳۳۵۶۰
+                  ۰۹۱۲۲۳۶۶۹۲۳
                 </Button>
               </a>
             </div>
