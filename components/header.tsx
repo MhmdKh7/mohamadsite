@@ -159,8 +159,8 @@ export function Header() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">پشتیبانی و مشاوره</p>
-                  <a href="tel:09122369623" className="font-bold text-foreground hover:text-accent transition-colors">
-                    09122369623
+                  <a href="tel:09122366923" className="font-bold text-foreground hover:text-accent transition-colors">
+                    09122366923
                   </a>
                 </div>
               </div>
@@ -257,8 +257,8 @@ export function Header() {
             <div className="flex items-center gap-2 text-sm text-secondary-foreground">
               <Phone className="h-4 w-4 text-accent" />
               <span>مشاوره و سفارش:</span>
-              <a href="tel:09122369623" className="text-accent font-bold hover:underline">
-                09122369623
+              <a href="tel:09122366923" className="text-accent font-bold hover:underline">
+                09122366923
               </a>
             </div>
           </div>
