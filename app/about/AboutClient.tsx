@@ -221,11 +221,11 @@ export default function AboutPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href="tel:09190033560"
+                            href="tel:09122366923"
                             className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-medium transition-colors"
                         >
                             <Phone className="h-5 w-5" />
-                            09122369623
+                            09122366923
                         </a>
                         <Link
                             href="/contact"
