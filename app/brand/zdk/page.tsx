@@ -17,18 +17,19 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 export const metadata: Metadata = {
-  title: "برند ZDK | معرفی بلبرینگ و یاتاقان ZDK",
+  title: "بلبرینگ ZDK | خرید و استعلام قیمت",
   description:
-    "معرفی کامل برند ZDK؛ تولیدکننده انواع بلبرینگ، رولبرینگ و یاتاقان صنعتی با کیفیت مطمئن و قیمت مناسب. خرید عمده محصولات ZDK از رول ماشین.",
+    "خرید بلبرینگ، رولبرینگ و یاتاقان ZDK. استعلام قیمت و موجودی از رول ماشین، نماینده فروش محصولات ZDK.",
   alternates: {
     canonical: "https://rollmachine.ir/brand/zdk",
   },
   openGraph: {
-    title: "برند ZDK | رول ماشین",
+    title: "بلبرینگ ZDK | رول ماشین",
     description:
-      "انواع بلبرینگ، رولبرینگ و یاتاقان صنعتی برند ZDK با کیفیت مطمئن و قیمت مناسب.",
+      "خرید و استعلام قیمت بلبرینگ و یاتاقان صنعتی برند ZDK از رول ماشین.",
     url: "https://rollmachine.ir/brand/zdk",
     type: "website",
+    images: [{ url: "/images/logo.png" }],
   },
 }
 
