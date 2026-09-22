@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
+import { siteCategories } from '@/lib/site-categories'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,35 +31,12 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 
-// دسته‌بندی محصولات - هر مورد به صفحه دسته‌بندی خودش لینک می‌شود
-const categories = [
-  // انواع یاتاقان‌های صنعتی
-  { name: 'یاتاقان UC', description: 'یاتاقان UC با کیفیت بالا', slug: 'uc' },
-  { name: 'یاتاقان UCP', description: 'یاتاقان با پایه UCP', slug: 'ucp' },
-  { name: 'یاتاقان UCF', description: 'یاتاقان چهارگوش UCF', slug: 'ucf' },
-  { name: 'یاتاقان UCT', description: 'یاتاقان کشویی UCT', slug: 'uct' },
-  { name: 'یاتاقان UCFC', description: 'یاتاقان فلنجی UCFC', slug: 'ucfc' },
-  { name: 'یاتاقان UCPA', description: 'یاتاقان قابل تنظیم UCPA', slug: 'ucpa' },
-  { name: 'یاتاقان SA', description: 'یاتاقان SA', slug: 'sa' },
-  { name: 'یاتاقان UK', description: 'یاتاقان UK', slug: 'uk' },
-  { name: 'یاتاقان SN', description: 'یاتاقان SN', slug: 'sn' },
-  { name: 'یاتاقان SNL', description: 'یاتاقان SNL', slug: 'snl' },
-  // ملزومات صنعتی
-  { name: 'بلبرینگ', description: 'انواع بلبرینگ شیار عمیق', slug: 'ball-bearing' },
-  { name: 'رولبرینگ', description: 'رولبرینگ مخروطی و استوانه‌ای', slug: 'roller-bearing' },
-  { name: 'تسمه', description: 'تسمه‌های صنعتی', slug: 'belt' },
-  { name: 'کاسه نمد', description: 'انواع کاسه نمد و آب‌بندی', slug: 'oil-seal' },
-  // روان‌کننده‌ها
-  { name: 'گریس', description: 'انواع گریس صنعتی', slug: 'grease' },
-  { name: 'روغن صنعتی', description: 'روغن‌های صنعتی', slug: 'oil' },
-  { name: 'چسب صنعتی', description: 'چسب‌های صنعتی', slug: 'glue' },
-  // واشر و آب‌بندی
-  { name: 'پکینگ', description: 'انواع پکینگ سفارشی', slug: 'packing' },
-  { name: 'اورینگ', description: 'انواع اورینگ', slug: 'oring' },
-  { name: 'تفلون', description: 'ورق و نوار تفلون', slug: 'teflon' },
-  // سایر
-  { name: 'پیچ و مهره', description: 'پیچ، مهره، واشر، خار، پولی', slug: 'bolt-nut' },
-]
+// دسته‌بندی محصولات — از منبع واحد siteCategories
+const categories = siteCategories.map((cat) => ({
+  name: cat.name,
+  description: cat.englishName,
+  slug: cat.slug,
+}))
 
 const bearingInfoItems = [
   { name: 'بلبرینگ چیست؟', href: '/bearing-info/what-is-bearing' },
