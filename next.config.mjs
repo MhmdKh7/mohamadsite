@@ -18,6 +18,16 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: "/((?!_next/static|images/).*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, s-maxage=60, stale-while-revalidate=600",
+          },
+        ],
+      },
+
+      {
         source: "/_next/static/:path*",
         headers: [
           {
