@@ -11,6 +11,7 @@ import {
   getArticleBySlug,
   getAllArticleSlugs,
 } from '@/lib/bearing-articles'
+import { BreadcrumbJsonLd } from '@/components/breadcrumb-json-ld'
 
 export function generateStaticParams() {
   return getAllArticleSlugs().map((slug) => ({ slug }))
@@ -61,6 +62,14 @@ export default async function BearingArticlePage({
     .slice(0, 3)
 
   return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'خانه', url: 'https://rollmachine.ir/' },
+          { name: 'آشنایی با بلبرینگ‌ها', url: 'https://rollmachine.ir/bearing-info' },
+          { name: article.title, url: `https://rollmachine.ir/bearing-info/${slug}` },
+        ]}
+      />
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
@@ -68,7 +77,7 @@ export default async function BearingArticlePage({
         {/* Hero */}
         <section className="relative bg-primary text-primary-foreground">
           <div className="absolute inset-0 opacity-20">
-            <Image src={article.image} alt={article.title} fill sizes="100vw" className="object-cover" />
+            <Image src={article.image} alt={article.title} fill sizes="100vw" priority className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-l from-primary/95 to-secondary/90" />
           <div className="container mx-auto px-4 py-14 md:py-20 relative z-10">
@@ -101,7 +110,7 @@ export default async function BearingArticlePage({
               {/* Article body */}
               <article className="lg:col-span-2 space-y-8">
                 <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden border border-border">
-                  <Image src={article.image} alt={article.title} fill sizes="100vw" className="object-cover" />
+                  <Image src={article.image} alt={article.title} fill sizes="(max-width: 1024px) 100vw, 66vw" loading="lazy" className="object-cover" />
                 </div>
 
                 <div className="space-y-4">
@@ -228,5 +237,6 @@ export default async function BearingArticlePage({
 
       <Footer />
     </div>
+    </>
   )
 }
