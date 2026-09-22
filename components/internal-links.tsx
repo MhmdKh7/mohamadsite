@@ -2,7 +2,7 @@ import Link from "next/link";
 import { categoryInfo } from "@/lib/category-info";
 
 const brandLinks = [
-  { name: "ZDK", slug: "zdk" },
+  { name: "نمایندگی انحصاری ZDK", slug: "zdk" },
   { name: "SKF", slug: "skf" },
   { name: "FAG", slug: "fag" },
   { name: "NSK", slug: "nsk" },
