@@ -52,8 +52,6 @@ export default function Page() {
               </Link>
             ))}
           </div>
-          </div>
-
         </section>
       </main>
       <Footer />
