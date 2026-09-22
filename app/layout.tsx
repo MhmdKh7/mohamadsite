@@ -1,5 +1,5 @@
 import StructuredData from "./structured-data";
-import "@/lib/firebase";
+import { FirebaseAnalytics } from "@/components/firebase-analytics";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Vazirmatn } from 'next/font/google'
@@ -149,6 +149,7 @@ export default function RootLayout({
       </head>
       <body className={`${vazirmatn.className} font-sans antialiased pb-20 md:pb-0`}>
         <StructuredData />
+        <FirebaseAnalytics />
         {children}
         <MobileContactBar />
         <Toaster position="top-center" />
