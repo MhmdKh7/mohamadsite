@@ -8,8 +8,33 @@ import {
   Settings,
   Send
 } from 'lucide-react'
+import { categoryInfo } from '@/lib/category-info'
+import { brandLinks } from '@/components/internal-links'
+
+const footerCategorySlugs = [
+  'uc',
+  'ucp',
+  'ucf',
+  'ball-bearing',
+  'roller-bearing',
+  'belt',
+  'oil-seal',
+  'grease',
+  'oil',
+  'packing',
+  'oring',
+  'teflon',
+  'bolt-nut',
+] as const
 
 export function Footer() {
+  const categoryLinks = footerCategorySlugs
+    .map((slug) => {
+      const info = categoryInfo[slug]
+      return info ? { slug, name: info.name } : null
+    })
+    .filter(Boolean) as { slug: string; name: string }[]
+
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
@@ -74,6 +99,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/products" className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  محصولات
+                </Link>
+              </li>
+              <li>
                 <Link href="/bearing-info" className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   آشنایی با بلبرینگ‌ها
@@ -92,48 +123,36 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+            <h4 className="text-lg font-bold mt-8 mb-4 text-primary-foreground">برندها</h4>
+            <ul className="flex flex-wrap gap-2">
+              {brandLinks.map((brand) => (
+                <li key={brand.slug}>
+                  <Link
+                    href={`/brand/${brand.slug}`}
+                    className="text-sm text-primary-foreground/90 hover:text-accent transition-colors underline-offset-2 hover:underline"
+                  >
+                    {brand.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Categories */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-primary-foreground">خدمات ما</h4>
+            <h4 className="text-lg font-bold mb-6 text-primary-foreground">دسته‌بندی‌ها</h4>
             <ul className="space-y-3">
-              <li>
-
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                یاتاقان‌های صنعتی (UC, UCP, UCF...)
-
-              </li>
-              <li>
-
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                بلبرینگ و رولبرینگ
-
-              </li>
-              <li>
-
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                گریس و روغن صنعتی
-
-              </li>
-              <li>
-
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                پکینگ، اورینگ و تفلون
-
-              </li>
-              <li>
-
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                تسمه و کاسه نمد
-
-              </li>
-              <li>
-
-                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                پیچ، مهره، واشر، خار، پولی
-
-              </li>
+              {categoryLinks.map((category) => (
+                <li key={category.slug}>
+                  <Link
+                    href={`/category/${category.slug}`}
+                    className="text-primary-foreground hover:text-accent transition-colors flex items-center gap-2"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    {category.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
