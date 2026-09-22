@@ -9,7 +9,6 @@ import {
   Send
 } from 'lucide-react'
 import { categoryInfo } from '@/lib/category-info'
-import { brandLinks } from '@/components/internal-links'
 
 const footerCategorySlugs = [
   'uc',
@@ -122,19 +121,6 @@ export function Footer() {
                   تماس با ما
                 </Link>
               </li>
-            </ul>
-            <h4 className="text-lg font-bold mt-8 mb-4 text-primary-foreground">برندها</h4>
-            <ul className="flex flex-wrap gap-2">
-              {brandLinks.map((brand) => (
-                <li key={brand.slug}>
-                  <Link
-                    href={`/brand/${brand.slug}`}
-                    className="text-sm text-primary-foreground/90 hover:text-accent transition-colors underline-offset-2 hover:underline"
-                  >
-                    {brand.name}
-                  </Link>
-                </li>
-              ))}
             </ul>
           </div>
 
