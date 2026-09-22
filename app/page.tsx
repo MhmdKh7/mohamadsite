@@ -440,7 +440,6 @@ export default function HomePage() {
         {/* Compact internal links */}
         <section className="py-10 bg-muted/40 border-y">
           <div className="container mx-auto px-4">
-            <InternalLinks compact />
           </div>
         </section>
 
