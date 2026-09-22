@@ -17,19 +17,35 @@ import { Footer } from "@/components/footer"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 export const metadata: Metadata = {
-  title: "بلبرینگ ZDK | خرید و استعلام قیمت",
+  title: {
+    absolute: "نمایندگی انحصاری بلبرینگ ZDK در ایران | رول ماشین",
+  },
   description:
-    "خرید بلبرینگ، رولبرینگ و یاتاقان ZDK. استعلام قیمت و موجودی از رول ماشین، نماینده فروش محصولات ZDK.",
+    "رول ماشین نمایندگی انحصاری بلبرینگ، رولبرینگ و یاتاقان ZDK در ایران. خرید عمده، استعلام قیمت و موجودی مستقیم از نماینده رسمی ZDK.",
+  keywords: [
+    "بلبرینگ ZDK",
+    "نمایندگی ZDK",
+    "نمایندگی انحصاری ZDK",
+    "خرید بلبرینگ ZDK",
+    "یاتاقان ZDK",
+    "رول ماشین",
+  ],
   alternates: {
     canonical: "https://rollmachine.ir/brand/zdk",
   },
   openGraph: {
-    title: "بلبرینگ ZDK | رول ماشین",
+    title: "نمایندگی انحصاری بلبرینگ ZDK | رول ماشین",
     description:
-      "خرید و استعلام قیمت بلبرینگ و یاتاقان صنعتی برند ZDK از رول ماشین.",
+      "خرید عمده و استعلام قیمت بلبرینگ و یاتاقان ZDK از نماینده انحصاری در ایران.",
     url: "https://rollmachine.ir/brand/zdk",
     type: "website",
-    images: [{ url: "/images/logo.png" }],
+    images: [{ url: "/images/logo.png", alt: "بلبرینگ ZDK | رول ماشین" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "نمایندگی انحصاری بلبرینگ ZDK | رول ماشین",
+    description:
+      "خرید عمده بلبرینگ و یاتاقان ZDK از نماینده انحصاری رول ماشین.",
   },
 }
 
@@ -75,8 +91,42 @@ export default function ZDKBrandPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "خانه", url: "https://rollmachine.ir/" },
-          { name: "برند ZDK", url: "https://rollmachine.ir/brand/zdk" },
+          { name: "نمایندگی انحصاری بلبرینگ ZDK", url: "https://rollmachine.ir/brand/zdk" },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Brand",
+            name: "ZDK",
+            url: "https://rollmachine.ir/brand/zdk",
+            logo: "https://rollmachine.ir/zdk-logo.jpeg",
+            slogan: "نمایندگی انحصاری بلبرینگ ZDK در ایران",
+            manufacturer: {
+              "@type": "Organization",
+              name: "Shandong ZDK Bearing",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "OfferCatalog",
+            name: "محصولات بلبرینگ و یاتاقان ZDK",
+            url: "https://rollmachine.ir/brand/zdk",
+            provider: {
+              "@type": "Organization",
+              name: "رول ماشین",
+              url: "https://rollmachine.ir",
+              telephone: "+98-912-2366923",
+            },
+          }),
+        }}
       />
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
