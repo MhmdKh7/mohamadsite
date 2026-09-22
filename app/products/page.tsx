@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { brandLinks } from "@/components/internal-links";
 import { categoryInfo } from "@/lib/category-info";
 
 export const metadata: Metadata = {
@@ -52,6 +53,22 @@ export default function Page() {
               </Link>
             ))}
           </div>
+
+          <div className="mt-14">
+            <h2 className="text-2xl font-bold mb-4">برندها</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {brandLinks.map((brand) => (
+                <Link
+                  key={brand.slug}
+                  href={`/brand/${brand.slug}`}
+                  className="rounded-xl border bg-card p-4 text-center font-bold hover:border-accent transition-colors"
+                >
+                  {brand.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </section>
       </main>
       <Footer />
