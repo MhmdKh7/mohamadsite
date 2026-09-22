@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { categoryInfo } from "@/lib/category-info";
 
+// ZDK is exclusive — keep it out of peer brand lists (footer/products/chips).
+// Featured separately on homepage + /brand/zdk.
 const brandLinks = [
-  { name: "نمایندگی انحصاری ZDK", slug: "zdk" },
   { name: "SKF", slug: "skf" },
   { name: "FAG", slug: "fag" },
   { name: "NSK", slug: "nsk" },
@@ -11,6 +12,11 @@ const brandLinks = [
   { name: "Koyo", slug: "koyo" },
   { name: "INA", slug: "ina" },
 ] as const;
+
+export const exclusiveBrandLink = {
+  name: "نمایندگی انحصاری ZDK",
+  slug: "zdk",
+} as const;
 
 type Props = {
   showCategories?: boolean;
