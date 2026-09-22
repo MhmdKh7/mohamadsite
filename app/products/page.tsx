@@ -6,16 +6,16 @@ import { brandLinks } from "@/components/internal-links";
 import { categoryInfo } from "@/lib/category-info";
 
 export const metadata: Metadata = {
-  title: "محصولات",
+  title: "بلبرینگ و رولبرینگ | محصولات",
   description:
-    "مشاهده انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی در رول ماشین. برای استعلام قیمت و موجودی با کارشناسان تماس بگیرید.",
+    "خرید و استعلام قیمت بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی. دسته‌بندی و برندهای معتبر در رول ماشین.",
   alternates: {
     canonical: "https://rollmachine.ir/products",
   },
   openGraph: {
-    title: "محصولات | رول ماشین",
+    title: "بلبرینگ و رولبرینگ | محصولات رول ماشین",
     description:
-      "مشاهده انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی در رول ماشین.",
+      "خرید و استعلام قیمت بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی از رول ماشین.",
     url: "https://rollmachine.ir/products",
     type: "website",
     images: [{ url: "/images/logo.png" }],
