@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categoryInfo } from "@/lib/category-info";
+import { siteCategories } from "@/lib/site-categories";
 
 // ZDK is exclusive — keep it out of peer brand lists (footer/products/chips).
 // Featured separately on homepage + /brand/zdk.
@@ -31,9 +31,9 @@ export function InternalLinks({
   className = "",
   compact = false,
 }: Props) {
-  const categories = Object.entries(categoryInfo).map(([slug, info]) => ({
-    slug,
-    name: info.name,
+  const categories = siteCategories.map((cat) => ({
+    slug: cat.slug,
+    name: cat.name,
   }));
 
   return (
