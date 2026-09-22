@@ -55,7 +55,9 @@ export default function CategoryPage() {
                             صفحه اصلی
                         </Link>
                         <ChevronLeft className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-muted-foreground">معرفی محصولات</span>
+                        <Link href="/products" className="text-muted-foreground hover:text-accent">
+                            محصولات
+                        </Link>
                         <ChevronLeft className="h-4 w-4 text-muted-foreground" />
                         <span className="text-foreground font-medium">{info.name}</span>
                     </nav>
