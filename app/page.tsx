@@ -25,7 +25,6 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { InternalLinks } from '@/components/internal-links'
 
 const categories = [
   // انواع یاتاقان‌های صنعتی
