@@ -37,19 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/brand/zdk`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
   ];
 
   const categoryRoutes: MetadataRoute.Sitemap = Object.keys(categoryInfo).map(
     (slug) => ({
       url: `${baseUrl}/category/${slug}`,
       lastModified,
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: 0.8,
     })
   );
@@ -58,11 +52,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (slug) => ({
       url: `${baseUrl}/bearing-info/${slug}`,
       lastModified,
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.7,
     })
   );
 
-  const brandRoutes: MetadataRoute.Sitemap = ["skf", "fag", "nsk", "timken", "ntn", "koyo", "ina"].map((slug) => ({ url: `${baseUrl}/brand/${slug}`, lastModified, changeFrequency: "monthly", priority: 0.7 }));
+  const brandSlugs = ["zdk", "skf", "fag", "nsk", "timken", "ntn", "koyo", "ina"];
+  const brandRoutes: MetadataRoute.Sitemap = brandSlugs.map((slug) => ({
+    url: `${baseUrl}/brand/${slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: slug === "zdk" ? 0.8 : 0.7,
+  }));
+
   return [...staticRoutes, ...categoryRoutes, ...articleRoutes, ...brandRoutes];
 }
