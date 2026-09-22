@@ -8,31 +8,13 @@ import {
   Settings,
   Send
 } from 'lucide-react'
-import { categoryInfo } from '@/lib/category-info'
-
-const footerCategorySlugs = [
-  'uc',
-  'ucp',
-  'ucf',
-  'ball-bearing',
-  'roller-bearing',
-  'belt',
-  'oil-seal',
-  'grease',
-  'oil',
-  'packing',
-  'oring',
-  'teflon',
-  'bolt-nut',
-] as const
+import { siteCategories } from '@/lib/site-categories'
 
 export function Footer() {
-  const categoryLinks = footerCategorySlugs
-    .map((slug) => {
-      const info = categoryInfo[slug]
-      return info ? { slug, name: info.name } : null
-    })
-    .filter(Boolean) as { slug: string; name: string }[]
+  const categoryLinks = siteCategories.map((cat) => ({
+    slug: cat.slug,
+    name: cat.name,
+  }))
 
   return (
     <footer className="bg-primary text-primary-foreground">
