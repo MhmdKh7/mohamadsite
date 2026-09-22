@@ -18,7 +18,7 @@ export default function StructuredData() {
 
         email: "rollmachine.bearing@gmail.com",
 
-        telephone: "+98-21-33948425",
+        telephone: ["+98-912-2366923", "+98-21-33948425"],
 
         sameAs: [
             "https://www.instagram.com/roll_machiine",
@@ -34,6 +34,13 @@ export default function StructuredData() {
                 areaServed: "IR",
                 availableLanguage: ["fa"],
             },
+            {
+                "@type": "ContactPoint",
+                telephone: "+98-21-33948425",
+                contactType: "customer service",
+                areaServed: "IR",
+                availableLanguage: ["fa"],
+            },
         ],
 
         address: {
@@ -44,11 +51,16 @@ export default function StructuredData() {
             addressRegion: "تهران",
             addressCountry: "IR",
         },
+
+        areaServed: {
+            "@type": "Country",
+            name: "IR",
+        },
     };
 
     const localBusiness = {
         "@context": "https://schema.org",
-        "@type": "Store",
+        "@type": ["Store", "LocalBusiness"],
         "@id": "https://rollmachine.ir/#store",
 
         name: "رول ماشین",
@@ -62,7 +74,7 @@ export default function StructuredData() {
         description:
             "عمده فروش و تامین کننده انواع بلبرینگ، رولبرینگ، یاتاقان و قطعات صنعتی",
 
-        telephone: "+98-21-33948425",
+        telephone: ["+98-912-2366923", "+98-21-33948425"],
 
         email: "rollmachine.bearing@gmail.com",
 
@@ -105,10 +117,20 @@ export default function StructuredData() {
             },
         ],
 
+        areaServed: {
+            "@type": "Country",
+            name: "IR",
+        },
+
         hasMap:
             "https://maps.app.goo.gl/fV7x5yq3HmvPWNaH7?g_st=ic",
+
+        parentOrganization: {
+            "@id": "https://rollmachine.ir/#organization",
+        },
     };
 
+    // No SearchAction: site has no public search URL.
     const website = {
         "@context": "https://schema.org",
         "@type": "WebSite",
