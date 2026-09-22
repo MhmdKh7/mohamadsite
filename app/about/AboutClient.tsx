@@ -196,15 +196,23 @@ export default function AboutPage() {
                         ما نماینده رسمی و توزیع‌کننده معتبرترین برندهای بلبرینگ جهان هستیم
                     </p>
                     <div className="grid grid-cols-3 md:grid-cols-6 gap-8">
-                        {["SKF", "FAG", "NSK", "TIMKEN", "NTN", "KOYO"].map((brand) => (
-                            <div
-                                key={brand}
+                        {[
+                            { name: "SKF", slug: "skf" },
+                            { name: "FAG", slug: "fag" },
+                            { name: "NSK", slug: "nsk" },
+                            { name: "TIMKEN", slug: "timken" },
+                            { name: "NTN", slug: "ntn" },
+                            { name: "KOYO", slug: "koyo" },
+                        ].map((brand) => (
+                            <Link
+                                key={brand.slug}
+                                href={`/brand/${brand.slug}`}
                                 className="bg-card p-6 rounded-lg border flex items-center justify-center hover:border-accent transition-colors"
                             >
                                 <span className="text-xl font-bold text-muted-foreground">
-                                    {brand}
+                                    {brand.name}
                                 </span>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
