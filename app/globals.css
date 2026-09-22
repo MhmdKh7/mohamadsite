@@ -215,6 +215,12 @@ footer .text-accent,
   color: #f87171 !important;
 }
 
+/* WCAG AA: #ff8a80 on #3d3d3d is ~4.79:1. */
+.bg-secondary .text-accent,
+.bg-secondary a.text-accent {
+  color: #ff8a80 !important;
+}
+
 .border-accent {
   border-color: #dc2626 !important;
 }
