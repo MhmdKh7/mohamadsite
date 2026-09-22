@@ -57,12 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  const brandSlugs = ["zdk", "skf", "fag", "nsk", "timken", "ntn", "koyo", "ina"];
+  const brandSlugs = ["zdk", "skf", "fag", "nsk", "timken", "ntn", "koyo", "ina"]; // zdk first: exclusive
   const brandRoutes: MetadataRoute.Sitemap = brandSlugs.map((slug) => ({
     url: `${baseUrl}/brand/${slug}`,
     lastModified,
     changeFrequency: "monthly" as const,
-    priority: slug === "zdk" ? 0.8 : 0.7,
+    priority: slug === "zdk" ? 0.95 : 0.65,
   }));
 
   return [...staticRoutes, ...categoryRoutes, ...articleRoutes, ...brandRoutes];
