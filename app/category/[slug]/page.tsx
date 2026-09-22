@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CategoryClient from "./CategoryClient";
 import { getCategoryInfo } from "@/lib/category-info";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -25,10 +26,10 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${info.name} | خرید و استعلام قیمت`;
+  const title = `${info.name} | بلبرینگ و قطعات صنعتی`;
 
   const description =
-    `${info.tagline} مشاهده مشخصات، کاربردها و دریافت مشاوره و استعلام قیمت ${info.name} از رول ماشین.`;
+    `خرید و استعلام قیمت ${info.name}. ${info.tagline} مشاوره تخصصی بلبرینگ و قطعات صنعتی از رول ماشین.`;
 
   return {
     title,
@@ -62,6 +63,22 @@ export async function generateMetadata({
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  if (!getCategoryInfo(slug)) notFound();
-  return <CategoryClient />;
+  const info = getCategoryInfo(slug);
+  if (!info) notFound();
+
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "خانه", url: "https://rollmachine.ir/" },
+          { name: "محصولات", url: "https://rollmachine.ir/products" },
+          {
+            name: info.name,
+            url: `https://rollmachine.ir/category/${slug}`,
+          },
+        ]}
+      />
+      <CategoryClient />
+    </>
+  );
 }
