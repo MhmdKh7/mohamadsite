@@ -11,7 +11,7 @@ export interface CategoryInfo {
 export const categoryInfo: Record<string, CategoryInfo> = {
   uc: {
     name: "یاتاقان UC",
-    englishName: "UC Insert Bearing",
+    englishName: "UC BEARING",
     tagline: "یاتاقان‌های گلوله‌ای با محفظه گرد و قابلیت نصب سریع روی شفت",
     overview: [
       "یاتاقان‌های سری UC نوعی بلبرینگ خودتنظیم با رینگ بیرونی کروی هستند که همراه با نشیمنگاه‌های مختلف (پایه، فلنج و ...) استفاده می‌شوند. این یاتاقان‌ها به کمک دو پیچ تنظیم (Set Screw) روی شفت محکم می‌شوند و نصب و تعویض آن‌ها بسیار ساده است.",
@@ -32,7 +32,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   ucp: {
     name: "یاتاقان UCP",
-    englishName: "UCP Pillow Block",
+    englishName: "UCP BEARING",
     tagline: "یاتاقان با پایه ایستاده برای نگهداری افقی شفت",
     overview: [
       "یاتاقان UCP ترکیبی از یاتاقان گلوله‌ای سری UC و نشیمنگاه پایه‌دار (Pillow Block) از جنس چدن است. این مجموعه برای نصب افقی شفت روی سطوح صاف طراحی شده و یکی از پرکاربردترین یاتاقان‌های نشیمنگاهی در صنعت است.",
@@ -53,7 +53,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   ucf: {
     name: "یاتاقان UCF",
-    englishName: "UCF Square Flange",
+    englishName: "UCF BEARING",
     tagline: "یاتاقان فلنج‌دار چهارگوش برای نصب عمودی",
     overview: [
       "یاتاقان UCF از یاتاقان سری UC به همراه نشیمنگاه فلنجی چهارگوش (Four-Bolt Flange) تشکیل شده است. این نوع یاتاقان برای نصب روی سطوح عمودی یا بدنه دستگاه با چهار پیچ به کار می‌رود.",
@@ -74,7 +74,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   uct: {
     name: "یاتاقان UCT",
-    englishName: "UCT Take-Up",
+    englishName: "UCT BEARING",
     tagline: "یاتاقان کشویی برای تنظیم کشش تسمه و نوار",
     overview: [
       "یاتاقان UCT دارای نشیمنگاه کشویی (Take-Up) است که امکان جابه‌جایی و تنظیم موقعیت یاتاقان در راستای طولی را فراهم می‌کند. این ویژگی برای تنظیم کشش تسمه یا نوار نقاله بسیار کاربردی است.",
@@ -95,7 +95,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   ucfc: {
     name: "یاتاقان UCFC",
-    englishName: "UCFC Round Flange",
+    englishName: "UCFC BEARING",
     tagline: "یاتاقان فلنج گرد برای نصب فشرده",
     overview: [
       "یاتاقان UCFC از نشیمنگاه فلنجی گرد با دو پیچ نصب بهره می‌برد. این طراحی فشرده‌تر از فلنج چهارگوش است و در فضاهای محدود که امکان نصب فلنج بزرگ وجود ندارد کاربرد دارد.",
@@ -116,7 +116,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   ucpa: {
     name: "یاتاقان UCPA",
-    englishName: "UCPA Adjustable",
+    englishName: "UCPA BEARING",
     tagline: "یاتاقان قابل تنظیم برای همراستایی دقیق شفت",
     overview: [
       "یاتاقان UCPA نوعی یاتاقان پایه‌دار قابل تنظیم است که در شرایطی که همراستایی دقیق شفت اهمیت دارد استفاده می‌شود. این یاتاقان امکان تنظیم زاویه و موقعیت را برای دستیابی به عملکرد بهینه فراهم می‌کند.",
@@ -233,7 +233,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   "ball-bearing": {
     name: "بلبرینگ",
-    englishName: "Ball Bearing",
+    englishName: "BALL BEARING",
     tagline: "بلبرینگ‌های شیار عمیق برای تحمل بار شعاعی و محوری",
     overview: [
       "بلبرینگ‌ها (Ball Bearing) پرکاربردترین نوع یاتاقان‌های غلتشی هستند که از ساچمه‌های فولادی بین دو رینگ داخلی و بیرونی تشکیل شده‌اند. این ساختار اصطکاک را به حداقل می‌رساند و امکان چرخش نرم و پرسرعت را فراهم می‌کند.",
@@ -259,7 +259,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   "roller-bearing": {
     name: "رولبرینگ",
-    englishName: "Roller Bearing",
+    englishName: "ROLLER BEARING",
     tagline: "رولبرینگ‌ها برای تحمل بارهای سنگین صنعتی",
     overview: [
       "رولبرینگ‌ها (Roller Bearing) به‌جای ساچمه از غلتک‌های استوانه‌ای، مخروطی یا بشکه‌ای استفاده می‌کنند. سطح تماس بیشتر غلتک با مسیر باعث می‌شود این یاتاقان‌ها ظرفیت تحمل بار بسیار بالاتری نسبت به بلبرینگ داشته باشند.",
@@ -344,8 +344,8 @@ export const categoryInfo: Record<string, CategoryInfo> = {
     ],
   },
   belt: {
-    name: "تسمه صنعتی",
-    englishName: "Industrial Belt",
+    name: "تسمه",
+    englishName: "BELT",
     tagline: "تسمه‌های انتقال قدرت برای موتورها و ماشین‌آلات",
     overview: [
       "تسمه‌های صنعتی برای انتقال قدرت بین پولی‌ها و چرخ‌دنده‌ها استفاده می‌شوند. انواع مختلف تسمه شامل تسمه‌های V شکل (Vبلت)، تایمینگ (دندانه‌دار) و تخت برای کاربردهای گوناگون تولید می‌شوند.",
@@ -365,7 +365,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   "oil-seal": {
     name: "کاسه نمد",
-    englishName: "Oil Seal",
+    englishName: "OIL SEAL",
     tagline: "قطعات آب‌بندی برای جلوگیری از نشت روغن و ورود آلودگی",
     overview: [
       "کاسه نمد (Oil Seal) قطعه‌ای آب‌بند است که میان بخش‌های ثابت و متحرک قرار می‌گیرد تا از نشت روغن و گریس جلوگیری کند و مانع ورود گرد و غبار و رطوبت به داخل مجموعه شود. جنس آن معمولاً لاستیک NBR با فنر فلزی تقویتی است.",
@@ -384,8 +384,8 @@ export const categoryInfo: Record<string, CategoryInfo> = {
     ],
   },
   grease: {
-    name: "گریس و روانکار",
-    englishName: "Grease & Lubricant",
+    name: "گریس",
+    englishName: "GREASE",
     tagline: "روان‌کننده‌های صنعتی برای افزایش عمر بلبرینگ",
     overview: [
       "گریس روان‌کننده‌ای نیمه‌جامد است که اصطکاک و سایش بین قطعات متحرک را کاهش می‌دهد و از یاتاقان‌ها در برابر خوردگی و گرمای بیش از حد محافظت می‌کند. انتخاب گریس مناسب نقش مهمی در طول عمر بلبرینگ دارد.",
@@ -405,7 +405,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   oil: {
     name: "روغن صنعتی",
-    englishName: "Industrial Oil",
+    englishName: "INDUSTRIAL OIL",
     tagline: "روغن‌های روانکاری و خنک‌کاری تجهیزات صنعتی",
     overview: [
       "روغن‌های صنعتی برای روانکاری، خنک‌کاری و انتقال حرارت در ماشین‌آلات به کار می‌روند. انواع روغن هیدرولیک، دنده و توربین برای کاربردهای مختلف با گرانروی (ویسکوزیته) متفاوت تولید می‌شوند.",
@@ -445,7 +445,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   packing: {
     name: "پکینگ",
-    englishName: "Packing / Gland Packing",
+    englishName: "PACKING",
     tagline: "آب‌بندهای صنعتی برای شرایط مختلف دما و فشار",
     overview: [
       "پکینگ (Gland Packing) نوعی آب‌بند بافته‌شده است که برای جلوگیری از نشت سیال در پمپ‌ها و شیرآلات به کار می‌رود. جنس آن می‌تواند از الیاف گرافیتی، تفلون، پنبه‌ای یا آرامید باشد و متناسب با دما و فشار انتخاب می‌شود.",
@@ -465,7 +465,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   oring: {
     name: "اورینگ",
-    englishName: "O-Ring",
+    englishName: "O-RING",
     tagline: "حلقه‌های آب‌بندی دایره‌ای با کیفیت بالا",
     overview: [
       "اورینگ (O-Ring) حلقه‌ای آب‌بند با مقطع دایره‌ای است که در شیارهای مخصوص قرار می‌گیرد و مانع نشت سیال یا گاز می‌شود. جنس آن معمولاً از لاستیک‌های NBR، ویتون (FKM) یا سیلیکون بسته به کاربرد است.",
@@ -485,7 +485,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   teflon: {
     name: "تفلون",
-    englishName: "PTFE / Teflon",
+    englishName: "TEFLON",
     tagline: "ورق و نوار تفلون مقاوم در برابر حرارت و مواد شیمیایی",
     overview: [
       "تفلون (PTFE) پلیمری با مقاومت بسیار بالا در برابر حرارت، مواد شیمیایی و اصطکاک پایین است. از این ماده در قالب ورق، میله، نوار و بوش برای آب‌بندی، عایق‌کاری و کاهش اصطکاک استفاده می‌شود.",
@@ -505,7 +505,7 @@ export const categoryInfo: Record<string, CategoryInfo> = {
   },
   "bolt-nut": {
     name: "پیچ و مهره",
-    englishName: "Bolt & Nut",
+    englishName: "BOLT & NUT",
     tagline: "اتصالات مکانیکی برای مونتاژ و مصارف صنعتی",
     overview: [
       "پیچ، مهره، واشر، خار و پولی از پرکاربردترین اتصالات مکانیکی در صنعت هستند که برای مونتاژ و اتصال قطعات به کار می‌روند. این محصولات در گریدهای استحکامی و جنس‌های مختلف (فولادی، استیل، گالوانیزه) عرضه می‌شوند.",
