@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { categoryInfo } from "@/lib/category-info";
+import { siteCategorySlugs } from "@/lib/site-categories";
 import { getAllArticleSlugs } from "@/lib/bearing-articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const categoryRoutes: MetadataRoute.Sitemap = Object.keys(categoryInfo).map(
+  const categoryRoutes: MetadataRoute.Sitemap = siteCategorySlugs.map(
     (slug) => ({
       url: `${baseUrl}/category/${slug}`,
       lastModified,
