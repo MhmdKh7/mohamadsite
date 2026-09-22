@@ -26,10 +26,10 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${info.name} | بلبرینگ و قطعات صنعتی`;
+  const title = `بلبرینگ ${info.name} | خرید و استعلام قیمت`;
 
   const description =
-    `خرید و استعلام قیمت ${info.name}. ${info.tagline} مشاوره تخصصی بلبرینگ و قطعات صنعتی از رول ماشین.`;
+    `خرید بلبرینگ و ${info.name}. ${info.tagline} استعلام قیمت و موجودی از رول ماشین.`;
 
   return {
     title,
