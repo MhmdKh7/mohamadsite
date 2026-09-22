@@ -6,6 +6,7 @@ import { Vazirmatn } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/sonner'
 import Script from 'next/script'
+import { MobileContactBar } from '@/components/mobile-contact-bar'
 
 const vazirmatn = Vazirmatn({
   subsets: ['arabic', 'latin'],
@@ -146,9 +147,10 @@ export default function RootLayout({
 }(window, document, "yektanet");
 `}</Script>
       </head>
-      <body className={`${vazirmatn.className} font-sans antialiased`}>
+      <body className={`${vazirmatn.className} font-sans antialiased pb-20 md:pb-0`}>
         <StructuredData />
         {children}
+        <MobileContactBar />
         <Toaster position="top-center" />
       </body>
 
