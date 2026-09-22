@@ -14,6 +14,8 @@ const vazirmatn = Vazirmatn({
   display: 'swap',
 })
 
+export const revalidate = 60
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://rollmachine.ir"),
 
