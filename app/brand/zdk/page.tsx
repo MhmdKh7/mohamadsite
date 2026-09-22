@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 export const metadata: Metadata = {
   title: "برند ZDK | معرفی بلبرینگ و یاتاقان ZDK",
@@ -69,6 +70,13 @@ const productTypes = [
 
 export default function ZDKBrandPage() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "خانه", url: "https://rollmachine.ir/" },
+          { name: "برند ZDK", url: "https://rollmachine.ir/brand/zdk" },
+        ]}
+      />
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
@@ -97,6 +105,8 @@ export default function ZDKBrandPage() {
                   alt="لوگوی رسمی برند ZDK"
                   width={160}
                   height={160}
+                  sizes="160px"
+                  priority
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -175,6 +185,7 @@ export default function ZDKBrandPage() {
                   alt="گواهی رسمی نمایندگی انحصاری برند ZDK برای رول ماشین در ایران"
                   width={800}
                   height={1280}
+                  sizes="(max-width: 768px) 100vw, 600px"
                   className="w-full h-auto"
                 />
               </div>
@@ -278,5 +289,6 @@ export default function ZDKBrandPage() {
 
       <Footer />
     </div>
+    </>
   )
 }
