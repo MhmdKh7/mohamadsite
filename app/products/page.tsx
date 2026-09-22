@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { siteCategories } from "@/lib/site-categories";
 import { categoryInfo } from "@/lib/category-info";
 
 export const metadata: Metadata = {
@@ -26,7 +27,12 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const categories = Object.entries(categoryInfo);
+  const categories = siteCategories.map((cat) => ({
+    slug: cat.slug,
+    name: cat.name,
+    englishName: cat.englishName,
+    tagline: categoryInfo[cat.slug]?.tagline ?? "",
+  }));
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -38,10 +44,10 @@ export default function Page() {
             دسته‌بندی محصولات رول ماشین. برای مشخصات فنی و استعلام قیمت با کارشناسان تماس بگیرید.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {categories.map(([slug, info]) => (
+            {categories.map((info) => (
               <Link
-                key={slug}
-                href={`/category/${slug}`}
+                key={info.slug}
+                href={`/category/${info.slug}`}
                 className="rounded-xl border bg-card p-5 hover:border-accent transition-colors"
               >
                 <h2 className="font-bold mb-1">{info.name}</h2>
