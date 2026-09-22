@@ -25,6 +25,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { InternalLinks } from '@/components/internal-links'
 
 const categories = [
   // انواع یاتاقان‌های صنعتی
@@ -278,6 +279,7 @@ export default function HomePage() {
                         alt={category.name}
                         fill
                         sizes="(max-width: 768px) 50vw, 16vw"
+                        loading="lazy"
                         className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-30"
                       />
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
@@ -332,6 +334,7 @@ export default function HomePage() {
                       alt={bearing.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 25vw"
+                      loading="lazy"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -431,6 +434,13 @@ export default function HomePage() {
                 )
               })}
             </div>
+          </div>
+        </section>
+
+        {/* Compact internal links */}
+        <section className="py-10 bg-muted/40 border-y">
+          <div className="container mx-auto px-4">
+            <InternalLinks compact />
           </div>
         </section>
 
